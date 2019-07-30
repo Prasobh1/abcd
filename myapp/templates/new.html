@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style>
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+</style>
+</head>
+<body>
+
+<h2>student details</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>name</th>
+    <th>age</th>
+     <th>place</th>
+  </tr>
+
+    {% for x in obj %}
+
+    <tr>
+    <td>{{ x.name }}</td>
+    <td>{{ x.age }}</td>
+    <td>{{ x.place }}</td>
+     <td><a href="{% url 'delete' x.id %}"><button type="button" class="btn btn-danger">delete</button></a></td>
+     <td><a href="{% url 'edit' x.id %}"><button type="button" class="btn btn-warning">edit</button></a></td>
+
+    </tr>
+   {% endfor %}
+
+<a href="{% url 'home' %}">Home</a>
+
+</body>
+</html>

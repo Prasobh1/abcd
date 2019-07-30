@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<center><h2>LOGIN</h2></center>
+
+<form method="post">
+
+    {% csrf_token %}
+
+    <center> ENTER USER NAME:</center><br>
+   <center> <input type="text"  name="uname"></center><br>
+    <center> ENTER PASSWORD:</center><br>
+    <center> <input type="password" name="psw"></center>
+  <br>
+    <br><center><h3>{{ msg }}</h3></center><br>
+    <center><input type="submit" value="Submit"></center> <br> <center>  <a href="{% url 'signup' %}"><button type="button" class="btn btn-warning">sign UP</button></a></center>
+
+</form>
+
+
+</body>

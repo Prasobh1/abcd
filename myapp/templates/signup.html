@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<center><h2>SIGN UP</h2></center>
+
+<form method="post">
+
+    {% csrf_token %}
+
+    <center> ENTER USER NAME:</center><br>
+   <center> <input type="text"  {{ form.username }}</center><br>
+    <center> ENTER PASSWORD:</center><br>
+    <center> <input type="password" {{ form.password }}</center><br>
+    <center> ENTER EMAIL:</center><br>
+   <center> <input type="email"  {{ form.email }}</center><br>
+     <center> ENTER NAME:</center><br>
+   <center> <input type="text"  {{ form.name }}</center><br>
+     <center> ENTER PLACE:</center><br>
+   <center> <input type="text"  {{ form.place }}</center><br>
+     <center> ENTER CONTACT NUMBER:</center><br>
+   <center> <input type="number"  {{ form.number }}</center><br>
+  <br>
+  <br><br>
+   <center><input type="submit" value="Submit"></center> <br> <center>  <a href="{% url 'login' %}">LOGIN</a></center>
+
+</form>
+
+
+</body>
+</html>

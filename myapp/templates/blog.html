@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>factorial</title>
+</head>
+<body>
+
+<h2>HTML Forms</h2>
+
+<form method="post">
+
+    {% csrf_token %}
+
+  enter number:<br>
+    <input type="text" name="number"><h3>{{ msg }}</h3>
+  <br>
+  <br><br>
+  <input type="submit" value="Submit">
+     <br>
+          <a href="{% url 'home' %}">Home</a>
+
+</form>
+
+
+</body>
+</html>

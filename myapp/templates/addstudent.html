@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<h2>student details</h2>
+
+<form method="post">
+
+    {% csrf_token %}
+
+  NAME:<br>
+    <input type="text" name="name" {{ form.name }}
+    <br>
+    AGE:<br>
+    <input type="text" name="age"{{ form.age }}
+    <br>
+    PLACE:<br>
+    <input type="text" name="place"{{ form.place}}
+  <br>
+  <br><br>
+  <input type="submit" value="Submit">
+     <br>
+          <a href="{% url 'home' %}">Home</a>
+
+</form>
+
+
+</body>
+</html>
